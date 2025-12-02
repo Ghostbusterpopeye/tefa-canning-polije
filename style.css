@@ -259,6 +259,7 @@ h2.page-title {
   width: 250px;
   height: auto;
   flex-shrink: 0;
+  align-items: center;
 }
 
 .visi-misi-section {
