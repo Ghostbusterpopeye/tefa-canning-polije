@@ -429,7 +429,7 @@ h2.page-title {
 
 .text-section, .map-section {
   flex: 1;
-  min-width: 280px;
+  min-width: 300px;
 }
 
 .contact-item h4 {
@@ -437,13 +437,9 @@ h2.page-title {
   margin: 20px 0 10px;
 }
 
-.map-title h4 {
-  color: var(--primary-red);
-  margin-bottom: 15px;
-}
-
+/* === MAPS BISA DIGERAKKAN === */
 .map-container {
-  height: 400px;
+  height: 450px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 10px 12px rgba(0,0,0,0.1);
