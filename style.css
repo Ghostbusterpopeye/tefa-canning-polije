@@ -256,10 +256,13 @@ h2.page-title {
 }
 
 .about-img {
-  width: 250px;
+  max-width: 600px;
+  width: 100%;
   height: auto;
-  flex-shrink: 0;
-  align-items: center;
+  border-radius: 8px;
+  margin: 0 auto 30px;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .visi-misi-section {
