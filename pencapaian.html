@@ -10,6 +10,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <!-- Custom CSS -->
+  <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/style_berita.css">
 </head>
 <body>
@@ -56,7 +57,7 @@
       <!-- Page Title -->
       <h1 class="page-title text-center">Berita Pencapaian</h1>
       
-      <!-- News Navigation -->
+      <!-- News Navigation - SAMA dengan kegiatan.html -->
       <div class="news-nav d-flex justify-content-center flex-wrap">
         <a href="/kegiatan.html">
           <button class="news-nav-item">
@@ -77,19 +78,19 @@
 
       <!-- Section: Pencapaian -->
       <section id="pencapaian" class="news-section active">
-        <!-- Menggunakan CSS Grid Original -->
+        <!-- Menggunakan CSS Grid Original - SAMA dengan kegiatan.html -->
         <div class="news-grid">
           <!-- News Item 1 -->
           <div class="news-item" onclick="showDetail('pencapaian1')">
             <div class="news-image">
-              <img src="/pencapian1.png" alt="Cetar! Dosen Polije Kembangkan Produk Surimi">
+              <img src="/pencapian1.png" alt="Sertifikasi SNI">
             </div>
             <div class="news-content">
               <div class="news-categories">
                 <span class="category-tag">Pencapaian</span>
               </div>
               <h3 class="news-title">Cetar! Dosen Polije Kembangkan Produk Surimi</h3>
-              <p class="news-summary">Dosen Polije berhasil mengembangkan produk surimi yang inovatif dan berkualitas tinggi.</p>
+              <p class="news-summary">Dosen Polije berhasil mengembangkan produk surimi yang inovatif dan berkualitas tinggi..</p>
               <div class="news-date">25 Januari 2024</div>
             </div>
           </div>
@@ -97,7 +98,7 @@
           <!-- News Item 2 -->
           <div class="news-item" onclick="showDetail('pencapaian2')">
             <div class="news-image">
-              <img src="/pencapaian2.jpg" alt="Sarden SIP Juara Pertama">
+              <img src="/pencapaian2.jpg" alt="Penghargaan Inovasi">
             </div>
             <div class="news-content">
               <div class="news-categories">
@@ -108,40 +109,10 @@
               <div class="news-date">20 Januari 2024</div>
             </div>
           </div>
-
-          <!-- News Item 3 -->
-          <div class="news-item" onclick="showDetail('pencapaian3')">
-            <div class="news-image">
-              <img src="/pencapaian3.jpg" alt="Sertifikasi SNI">
-            </div>
-            <div class="news-content">
-              <div class="news-categories">
-                <span class="category-tag">Pencapaian</span>
-              </div>
-              <h3 class="news-title">TEFA Canning raih sertifikasi SNI untuk produk sarden kaleng</h3>
-              <p class="news-summary">Produk sarden kaleng TEFA Canning berhasil meraih sertifikasi Standar Nasional Indonesia (SNI).</p>
-              <div class="news-date">15 Januari 2024</div>
-            </div>
-          </div>
-
-          <!-- News Item 4 -->
-          <div class="news-item" onclick="showDetail('pencapaian4')">
-            <div class="news-image">
-              <img src="/pencapaian4.jpg" alt="Penghargaan Inovasi">
-            </div>
-            <div class="news-content">
-              <div class="news-categories">
-                <span class="category-tag">Pencapaian</span>
-              </div>
-              <h3 class="news-title">Mahasiswa Polije raih penghargaan inovasi teknologi pangan terbaik</h3>
-              <p class="news-summary">Tim mahasiswa Polije berhasil meraih penghargaan inovasi teknologi pangan terbaik tingkat nasional.</p>
-              <div class="news-date">10 Januari 2024</div>
-            </div>
-          </div>
         </div>
       </section>
 
-      <!-- Section: Detail Berita -->
+      <!-- Section: Detail Berita - SAMA dengan kegiatan.html -->
       <section id="detail-berita" class="news-section">
         <div class="berita-detail">
           <h2 id="detail-title" class="page-title">Judul Berita</h2>
@@ -184,6 +155,7 @@
           <a href="/tentang.html">Visi misi</a>
           <a href="/tentang.html">Tentang Sarden</a>
 
+          <!-- Tambahkan "Kontak" di sini (bukan sebagai kolom terpisah) -->
           <h4 style="margin-top: 15px;">Kontak</h4>
           <a href="/kontak.html">Hubungi Kami</a>
         </div>
@@ -231,14 +203,8 @@
         content: `
           <p>TEFA Jember - Dosen dan tim peneliti dari Politeknik Negeri Jember (Polije) berhasil mengembangkan produk surimi (lumatan daging ikan beku) yang inovatif dan berkualitas tinggi. Inisiatif ini merupakan bagian dari upaya Polije untuk meningkatkan nilai tambah produk perikanan dan mendukung sektor industri pengolahan hasil laut.</p>
           <p>Pengembangan produk ini berfokus pada inovasi proses dan formulasi untuk menghasilkan surimi dengan karakteristik mutu yang unggul. Pencapaian ini didokumentasikan dalam kegiatan yang dilakukan oleh tim dosen Polije di bawah tema pengabdian kepada masyarakat.</p>
-          <p>Keberhasilan ini diharapkan dapat menjadi kontribusi nyata Polije dalam mendorong hilirisasi produk perikanan dan menciptakan peluang bisnis baru bagi masyarakat dan industri. Produk surimi ini telah melalui berbagai tahap pengujian dan terbukti memenuhi standar kualitas yang tinggi.</p>
-          <p><strong>Keunggulan Produk:</strong></p>
-          <ul>
-            <li>Kualitas protein yang tinggi</li>
-            <li>Tekstur yang konsisten</li>
-            <li>Umur simpan yang panjang</li>
-            <li>Ramah lingkungan dalam proses produksi</li>
-          </ul>
+          <p>Keberhasilan ini diharapkan dapat menjadi kontribusi nyata Polije dalam mendorong hilirisasi produk perikanan dan menciptakan peluang bisnis baru bagi masyarakat dan industri.</p>
+          <p> Tanggal Publikasi: 15 November 2023.</p>
         `
       },
       'pencapaian2': {
@@ -249,55 +215,12 @@
         content: `
           <p>Sarden SIP berhasil meraih juara pertama dalam Lomba Inovasi Produk Pangan Nasional yang diselenggarakan oleh Kementerian Perindustrian. Pencapaian ini membuktikan bahwa produk sarden kaleng hasil karya mahasiswa dan dosen TEFA Polije mampu bersaing di tingkat nasional.</p>
           <p>Penilaian lomba mencakup aspek inovasi produk, kualitas dan keamanan pangan, desain kemasan, serta strategi pemasaran. Tim juri memberikan apresiasi tinggi terhadap inovasi varian rasa dan penerapan teknologi modern dalam proses produksi.</p>
-          <p><strong>Faktor Penentu Kemenangan:</strong></p>
-          <ul>
-            <li>Inovasi proses sterilisasi yang lebih efisien</li>
-            <li>Kualitas rasa yang unggul dan konsisten</li>
-            <li>Desain kemasan yang menarik dan informatif</li>
-            <li>Strategi pemasaran yang terencana dengan baik</li>
-          </ul>
           <p>Penghargaan ini memotivasi TEFA Polije untuk terus berinovasi dan menghasilkan produk-produk pangan berkualitas yang dapat berkontribusi bagi industri pangan nasional.</p>
         `
       },
-      'pencapaian3': {
-        title: 'TEFA Canning raih sertifikasi SNI untuk produk sarden kaleng',
-        category: 'Pencapaian',
-        date: '15 Januari 2024',
-        image: '/pencapaian3.jpg',
-        content: `
-          <p>TEFA Canning berhasil meraih sertifikasi Standar Nasional Indonesia (SNI) untuk produk sarden kalengnya. Sertifikasi ini merupakan pengakuan resmi terhadap kualitas dan keamanan produk sarden yang dihasilkan.</p>
-          <p>Proses sertifikasi melibatkan audit menyeluruh terhadap seluruh aspek produksi, mulai dari bahan baku, proses pengolahan, hingga pengemasan dan penyimpanan. Tim auditor dari Badan Standardisasi Nasional (BSN) melakukan penilaian ketat selama tiga hari.</p>
-          <p><strong>Aspek yang Dinilai:</strong></p>
-          <ul>
-            <li>Kualitas bahan baku ikan lemuru</li>
-            <li>Proses pengalengan yang higienis</li>
-            <li>Standar sterilisasi yang ketat</li>
-            <li>Sistem pengawasan mutu yang komprehensif</li>
-          </ul>
-          <p>Dengan sertifikasi SNI ini, produk sarden kaleng TEFA Canning dapat dipasarkan secara lebih luas dan diakui kualitasnya oleh konsumen dan industri.</p>
-        `
-      },
-      'pencapaian4': {
-        title: 'Mahasiswa Polije raih penghargaan inovasi teknologi pangan terbaik',
-        category: 'Pencapaian',
-        date: '10 Januari 2024',
-        image: '/pencapaian4.jpg',
-        content: `
-          <p>Tim mahasiswa Politeknik Negeri Jember berhasil meraih penghargaan inovasi teknologi pangan terbaik dalam kompetisi nasional yang diselenggarakan oleh Asosiasi Teknologi Pangan Indonesia. Penghargaan ini diberikan untuk inovasi dalam proses pengalengan ikan yang lebih efisien dan ramah lingkungan.</p>
-          <p>Inovasi yang dikembangkan meliputi sistem monitoring otomatis pada proses retorting, pengembangan kemasan biodegradable, dan optimasi proses sterilisasi untuk mengurangi konsumsi energi.</p>
-          <p><strong>Inovasi yang Dikembangkan:</strong></p>
-          <ul>
-            <li>Sistem monitoring suhu dan tekanan otomatis</li>
-            <li>Kemasan ramah lingkungan berbasis bioplastik</li>
-            <li>Optimasi waktu sterilisasi untuk efisiensi energi</li>
-            <li>Aplikasi mobile untuk quality control</li>
-          </ul>
-          <p>Penghargaan ini menunjukkan bahwa pendidikan vokasi di Polije mampu menghasilkan lulusan yang kompeten dan inovatif di bidang teknologi pangan.</p>
-        `
-      }
     };
 
-    // Fungsi untuk menampilkan detail berita
+    // Fungsi untuk menampilkan detail berita - SAMA dengan kegiatan.html
     function showDetail(beritaId) {
       const berita = beritaData[beritaId];
       
@@ -317,7 +240,7 @@
       }
     }
 
-    // Fungsi untuk menyembunyikan detail berita
+    // Fungsi untuk menyembunyikan detail berita - SAMA dengan kegiatan.html
     function hideDetail() {
       // Kembali ke section pencapaian
       document.getElementById('detail-berita').classList.remove('active');
