@@ -4,16 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pencapaian - TEFA Pengalengan Ikan</title>
-  
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <!-- Poppins Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/style_berita_bootstrap.css">
+  <link rel="stylesheet" href="/style_berita.css">
 </head>
 <body>
   <!-- Navigation -->
@@ -57,126 +50,137 @@
     <div class="container">
       
       <!-- Page Title -->
-      <h1 class="page-title-custom">Berita Pencapaian</h1>
+      <h1 class="page-title">Berita Pencapaian</h1>
       
       <!-- News Navigation -->
-      <div class="d-flex justify-content-center gap-3 mb-5 flex-wrap">
+      <div class="news-nav">
         <a href="/kegiatan.html">
-          <button class="news-nav-item-custom">
-            <i class="fas fa-calendar-alt me-2"></i>Kegiatan
+          <button class="news-nav-item">
+            <i class="fas fa-calendar-alt"></i>Kegiatan
           </button>
         </a>
         <a href="/inovasi.html">
-          <button class="news-nav-item-custom">
-            <i class="fas fa-lightbulb me-2"></i>Inovasi
+          <button class="news-nav-item">
+            <i class="fas fa-lightbulb"></i>Inovasi
           </button>
         </a>
         <a href="/pencapaian.html">
-          <button class="news-nav-item-custom active">
-            <i class="fas fa-trophy me-2"></i>Pencapaian
+          <button class="news-nav-item active">
+            <i class="fas fa-trophy"></i>Pencapaian
           </button>
         </a>
       </div>
 
-      <!-- Berita Pencapaian 1 -->
-      <div class="news-card-custom" onclick="showDetail('pencapaian1')">
-        <div class="news-header-custom">
-          <i class="fas fa-trophy"></i>Pencapaian
-        </div>
-        <div class="news-content-custom">
-          <h2 class="news-title-custom">
-            Cetar! Dosen Polije Kembangkan Produk Surimi
-            <br><small>Dosen Polije berhasil mengembangkan produk surimi yang inovatif dan berkualitas tinggi.</small>
-          </h2>
-          <p class="news-summary-custom">
-            Dosen dan tim peneliti dari Politeknik Negeri Jember (Polije) berhasil mengembangkan produk surimi (lumatan daging ikan beku) yang inovatif dan berkualitas tinggi. Inisiatif ini merupakan bagian dari upaya Polije untuk meningkatkan nilai tambah produk perikanan.
-          </p>
-          <div class="news-date-custom">25 Januari 2024</div>
-        </div>
-      </div>
+      <!-- Section: Pencapaian -->
+      <section id="pencapaian" class="news-section active">
+        <div class="news-grid">
+          <!-- News Item 1 -->
+          <div class="news-item" onclick="showDetail('pencapaian1')">
+            <div class="news-image">
+              <img src="/pencapian1.png" alt="Sertifikasi SNI">
+            </div>
+            <div class="news-content">
+              <div class="news-categories">
+                <span class="category-tag">Pencapaian</span>
+              </div>
+              <h3 class="news-title">Cetar! Dosen Polije Kembangkan Produk Surimi</h3>
+              <p class="news-summary">Dosen Polije berhasil mengembangkan produk surimi yang inovatif dan berkualitas tinggi..</p>
+              <div class="news-date">25 Januari 2024</div>
+            </div>
+          </div>
 
-      <!-- Berita Pencapaian 2 -->
-      <div class="news-card-custom" onclick="showDetail('pencapaian2')">
-        <div class="news-header-custom">
-          <i class="fas fa-trophy"></i>Pencapaian
+          <!-- News Item 2 -->
+          <div class="news-item" onclick="showDetail('pencapaian2')">
+            <div class="news-image">
+              <img src="/pencapaian2.jpg" alt="Penghargaan Inovasi">
+            </div>
+            <div class="news-content">
+              <div class="news-categories">
+                <span class="category-tag">Pencapaian</span>
+              </div>
+              <h3 class="news-title">Sarden SIP raih juara pertama lomba inovasi produk pangan nasional</h3>
+              <p class="news-summary">Prestasi membanggakan dengan meraih juara pertama dalam lomba inovasi produk pangan tingkat nasional.</p>
+              <div class="news-date">20 Januari 2024</div>
+            </div>
+          </div>
+      </section>
+
+      <!-- Section: Detail Berita -->
+      <section id="detail-berita" class="news-section">
+        <div class="berita-detail">
+          <h2 id="detail-title" class="page-title">Judul Berita</h2>
+          <div class="meta text-muted mb-3" id="detail-meta">Tanggal: | Kategori: </div>
+          <img id="detail-image" src="" alt="Gambar Berita" class="img-fluid rounded mb-4">
+          <div class="content mb-4" id="detail-content">
+          </div>
+          <button class="btn btn-danger" onclick="hideDetail()">
+            <i class="fas fa-arrow-left"></i>Kembali ke Berita
+          </button>
         </div>
-        <div class="news-content-custom">
-          <h2 class="news-title-custom">
-            Sarden SIP raih juara pertama lomba inovasi produk pangan nasional
-            <br><small>Prestasi membanggakan dengan meraih juara pertama dalam lomba inovasi produk pangan tingkat nasional.</small>
-          </h2>
-          <p class="news-summary-custom">
-            Sarden SIP berhasil meraih juara pertama dalam Lomba Inovasi Produk Pangan Nasional yang diselenggarakan oleh Kementerian Perindustrian. Pencapaian ini membuktikan bahwa produk sarden kaleng hasil karya mahasiswa dan dosen TEFA Polije mampu bersaing di tingkat nasional.
-          </p>
-          <div class="news-date-custom">20 Januari 2024</div>
-        </div>
-      </div>
+      </section>
 
     </div>
   </main>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-brand">
-        <div class="footer-logos">
-          <img src="/logopolije.png" alt="Logo Polije">
-          <img src="/Logosip.png" alt="Logo SIP">
-          <img src="/Logotefa.png" alt="Logo TEFA">
-        </div>
-        <span class="footer-text">Tefa Pengalengan</span>
+<footer>
+  <div class="footer-container">
+    <div class="footer-brand">
+      <div class="footer-logos">
+        <img src="/logopolije.png" alt="Logo Polije">
+        <img src="/Logosip.png" alt="Logo SIP">
+        <img src="/Logotefa.png" alt="Logo TEFA">
       </div>
-
-      <div class="footer-menu">
-        <!-- Kolom 1: Alamat -->
-        <div class="footer-menu-column">
-          <h4>Alamat</h4>
-          <p>Alamat RPVG+PQJ, Jl. Tawang Mangu,<br>Lingkungan Panji, Tegalgede,<br>Kec. Sumbersari, Kabupaten Jember, Jawa Timur 68124<br>Politeknik Negeri Jember</p>
-        </div>
-
-        <!-- Kolom 2: Tentang Kami + KONTAK -->
-        <div class="footer-menu-column">
-          <h4>Tentang kami</h4>
-          <a href="/tentang.html">Sejarah</a>
-          <a href="/tentang.html">Visi misi</a>
-          <a href="/tentang.html">Tentang Sarden</a>
-
-          <!-- Tambahkan "Kontak" di sini (bukan sebagai kolom terpisah) -->
-          <h4 style="margin-top: 15px;">Kontak</h4>
-          <a href="/kontak.html">Hubungi Kami</a>
-        </div>
-
-        <!-- Kolom 3: Produk Kami -->
-        <div class="footer-menu-column">
-          <h4>Produk Kami</h4>
-          <a href="/produk.html">Detail produk</a>
-          <a href="/informasi.html">Informasi keamanan produk</a>
-        </div>
-
-        <!-- Kolom 4: Proses pembuatan -->
-        <div class="footer-menu-column">
-          <h4>Proses pembuatan</h4>
-          <a href="/tahapan.html">Tahapan</a>
-          <a href="/alat.html">Alat alat</a>
-        </div>
-
-        <!-- Kolom 5: Berita -->
-        <div class="footer-menu-column">
-          <h4>Berita</h4>
-          <a href="/kegiatan.html">Kegiatan</a>
-          <a href="/inovasi.html">Inovasi</a>
-          <a href="/pencapaian.html">Pencapaian</a>
-        </div>
-      </div>
+      <span class="footer-text">Tefa Pengalengan</span>
     </div>
 
-    <div class="footer-bottom">
-      <h3>Smart, Innovative, Professional</h3>
+    <div class="footer-menu">
+      <!-- Kolom 1: Alamat -->
+      <div class="footer-menu-column">
+        <h4>Alamat</h4>
+        <p>Alamat RPVG+PQJ, Jl. Tawang Mangu,<br>Lingkungan Panji, Tegalgede,<br>Kec. Sumbersari, Kabupaten Jember, Jawa Timur 68124<br>Politeknik Negeri Jember</p>
+      </div>
+
+      <!-- Kolom 2: Tentang Kami + KONTAK -->
+      <div class="footer-menu-column">
+        <h4>Tentang kami</h4>
+        <a href="/tentang.html">Sejarah</a>
+        <a href="/tentang.html">Visi misi</a>
+        <a href="/tentang.html">Tentang Sarden</a>
+
+        <!-- Tambahkan "Kontak" di sini (bukan sebagai kolom terpisah) -->
+        <h4 style="margin-top: 15px;">Kontak</h4>
+        <a href="/kontak.html">Hubungi Kami</a>
+      </div>
+
+      <!-- Kolom 3: Produk Kami -->
+      <div class="footer-menu-column">
+        <h4>Produk Kami</h4>
+        <a href="/produk.html">Detail produk</a>
+        <a href="/informasi.html">Informasi keamanan produk</a>
+      </div>
+
+      <!-- Kolom 4: Proses pembuatan -->
+      <div class="footer-menu-column">
+        <h4>Proses pembuatan</h4>
+        <a href="/tahapan.html">Tahapan</a>
+        <a href="/alat.html">Alat alat</a>
+      </div>
+
+      <!-- Kolom 5: Berita -->
+      <div class="footer-menu-column">
+        <h4>Berita</h4>
+        <a href="/kegiatan.html">Kegiatan</a>
+        <a href="/inovasi.html">Inovasi</a>
+        <a href="/pencapaian.html">Pencapaian</a>
+      </div>
     </div>
-  </footer>
-  
-  <!-- Bootstrap 5 JS Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+
+  <div class="footer-bottom">
+    <h3>Smart, Innovative, Professional</h3>
+  </div>
+</footer>
   
   <script>
     // Data berita pencapaian
@@ -190,7 +194,7 @@
           <p>TEFA Jember - Dosen dan tim peneliti dari Politeknik Negeri Jember (Polije) berhasil mengembangkan produk surimi (lumatan daging ikan beku) yang inovatif dan berkualitas tinggi. Inisiatif ini merupakan bagian dari upaya Polije untuk meningkatkan nilai tambah produk perikanan dan mendukung sektor industri pengolahan hasil laut.</p>
           <p>Pengembangan produk ini berfokus pada inovasi proses dan formulasi untuk menghasilkan surimi dengan karakteristik mutu yang unggul. Pencapaian ini didokumentasikan dalam kegiatan yang dilakukan oleh tim dosen Polije di bawah tema pengabdian kepada masyarakat.</p>
           <p>Keberhasilan ini diharapkan dapat menjadi kontribusi nyata Polije dalam mendorong hilirisasi produk perikanan dan menciptakan peluang bisnis baru bagi masyarakat dan industri.</p>
-          <p>Tanggal Publikasi: 15 November 2023.</p>
+          <p> Tanggal Publikasi: 15 November 2023.</p>
         `
       },
       'pencapaian2': {
@@ -203,42 +207,30 @@
           <p>Penilaian lomba mencakup aspek inovasi produk, kualitas dan keamanan pangan, desain kemasan, serta strategi pemasaran. Tim juri memberikan apresiasi tinggi terhadap inovasi varian rasa dan penerapan teknologi modern dalam proses produksi.</p>
           <p>Penghargaan ini memotivasi TEFA Polije untuk terus berinovasi dan menghasilkan produk-produk pangan berkualitas yang dapat berkontribusi bagi industri pangan nasional.</p>
         `
-      }
+      },
     };
 
-    // Fungsi untuk menampilkan detail berita (modal)
+    // Fungsi untuk menampilkan detail berita
     function showDetail(beritaId) {
       const berita = beritaData[beritaId];
       
       if (berita) {
-        const modalContent = `
-          <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="detailModalLabel">${berita.title}</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div class="meta-custom mb-3">Tanggal: ${berita.date} | Kategori: ${berita.category}</div>
-                  ${berita.image ? `<img src="${berita.image}" alt="${berita.title}" class="img-fluid rounded mb-3">` : ''}
-                  <div class="content-custom">${berita.content}</div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-custom-danger" data-bs-dismiss="modal">Tutup</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
-        
-        const existingModal = document.getElementById('detailModal');
-        if (existingModal) existingModal.remove();
-        
-        document.body.insertAdjacentHTML('beforeend', modalContent);
-        const modal = new bootstrap.Modal(document.getElementById('detailModal'));
-        modal.show();
+        document.getElementById('detail-title').textContent = berita.title;
+        document.getElementById('detail-meta').textContent = `Tanggal: ${berita.date} | Kategori: ${berita.category}`;
+        document.getElementById('detail-image').src = berita.image;
+        document.getElementById('detail-image').alt = berita.title;
+        document.getElementById('detail-content').innerHTML = berita.content;
+        document.getElementById('pencapaian').classList.remove('active');
+        document.getElementById('detail-berita').classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
+    }
+
+    // Fungsi untuk menyembunyikan detail berita
+    function hideDetail() {
+      document.getElementById('detail-berita').classList.remove('active');
+      document.getElementById('pencapaian').classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
 </body>
