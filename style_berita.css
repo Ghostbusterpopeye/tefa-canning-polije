@@ -297,6 +297,47 @@ body {
   text-decoration: underline;
 }
 
+/* === BOOTSTRAP UTILITY OVERRIDES === */
+
+/* Pastikan class Bootstrap tidak mengganggu styling custom */
+.news-nav-item.bootstrap-btn {
+    background: white;
+    border: 2px solid var(--primary-red);
+    color: var(--primary-red);
+    padding: 12px 28px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.news-nav-item.bootstrap-btn:hover {
+    background: var(--primary-red);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(179, 16, 17, 0.3);
+}
+
+.news-nav-item.active.bootstrap-btn {
+    background: var(--primary-red);
+    color: white;
+    box-shadow: 0 4px 12px rgba(179, 16, 17, 0.3);
+}
+
+/* Override untuk memastikan grid Bootstrap tidak mengganggu */
+.bootstrap-grid .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Utility tambahan */
+.d-flex-gap-3 {
+    gap: 15px;
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .page-title {
