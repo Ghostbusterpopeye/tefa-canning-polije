@@ -4,8 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inovasi - TEFA Pengalengan Ikan</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="/style.css">
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="/style_berita.css">
 </head>
 <body>
@@ -50,29 +54,30 @@
     <div class="container">
       
       <!-- Page Title -->
-      <h1 class="page-title">Berita Inovasi</h1>
+      <h1 class="page-title text-center">Berita Inovasi</h1>
       
       <!-- News Navigation -->
-      <div class="news-nav">
+      <div class="news-nav d-flex justify-content-center flex-wrap">
         <a href="/kegiatan.html">
           <button class="news-nav-item">
-            <i class="fas fa-calendar-alt"></i>Kegiatan
+            <i class="fas fa-calendar-alt me-2"></i>Kegiatan
           </button>
         </a>
         <a href="/inovasi.html">
           <button class="news-nav-item active">
-            <i class="fas fa-lightbulb"></i>Inovasi
+            <i class="fas fa-lightbulb me-2"></i>Inovasi
           </button>
         </a>
         <a href="/pencapaian.html">
           <button class="news-nav-item">
-            <i class="fas fa-trophy"></i>Pencapaian
+            <i class="fas fa-trophy me-2"></i>Pencapaian
           </button>
         </a>
       </div>
 
       <!-- Section: Inovasi -->
       <section id="inovasi" class="news-section active">
+        <!-- Menggunakan CSS Grid Original -->
         <div class="news-grid">
           <!-- News Item 1 -->
           <div class="news-item" onclick="showDetail('inovasi1')">
@@ -103,6 +108,36 @@
               <div class="news-date">15 Desember 2023</div>
             </div>
           </div>
+
+          <!-- News Item 3 -->
+          <div class="news-item" onclick="showDetail('inovasi3')">
+            <div class="news-image">
+              <img src="/inovasi3.jpg" alt="Sistem Monitoring IoT">
+            </div>
+            <div class="news-content">
+              <div class="news-categories">
+                <span class="category-tag">Inovasi</span>
+              </div>
+              <h3 class="news-title">Pengembangan sistem monitoring IoT untuk proses sterilisasi sarden kaleng</h3>
+              <p class="news-summary">Implementasi sistem Internet of Things (IoT) untuk memantau dan mengontrol proses sterilisasi secara real-time.</p>
+              <div class="news-date">10 Desember 2023</div>
+            </div>
+          </div>
+
+          <!-- News Item 4 -->
+          <div class="news-item" onclick="showDetail('inovasi4')">
+            <div class="news-image">
+              <img src="/inovasi4.jpg" alt="Varian Rasa Baru">
+            </div>
+            <div class="news-content">
+              <div class="news-categories">
+                <span class="category-tag">Inovasi</span>
+              </div>
+              <h3 class="news-title">Inovasi varian rasa sarden kaleng dengan bahan rempah lokal Indonesia</h3>
+              <p class="news-summary">Pengembangan varian rasa baru dengan memanfaatkan kekayaan rempah-rempah lokal Indonesia.</p>
+              <div class="news-date">5 Desember 2023</div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -115,7 +150,7 @@
           <div class="content mb-4" id="detail-content">
           </div>
           <button class="btn btn-danger" onclick="hideDetail()">
-            <i class="fas fa-arrow-left"></i>Kembali ke Berita
+            <i class="fas fa-arrow-left me-2"></i>Kembali ke Berita
           </button>
         </div>
       </section>
@@ -124,64 +159,66 @@
   </main>
 
   <!-- Footer -->
-<footer>
-  <div class="footer-container">
-    <div class="footer-brand">
-      <div class="footer-logos">
-        <img src="/logopolije.png" alt="Logo Polije">
-        <img src="/Logosip.png" alt="Logo SIP">
-        <img src="/Logotefa.png" alt="Logo TEFA">
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logos">
+          <img src="/logopolije.png" alt="Logo Polije">
+          <img src="/Logosip.png" alt="Logo SIP">
+          <img src="/Logotefa.png" alt="Logo TEFA">
+        </div>
+        <span class="footer-text">Tefa Pengalengan</span>
       </div>
-      <span class="footer-text">Tefa Pengalengan</span>
+
+      <div class="footer-menu">
+        <!-- Kolom 1: Alamat -->
+        <div class="footer-menu-column">
+          <h4>Alamat</h4>
+          <p>Alamat RPVG+PQJ, Jl. Tawang Mangu,<br>Lingkungan Panji, Tegalgede,<br>Kec. Sumbersari, Kabupaten Jember, Jawa Timur 68124<br>Politeknik Negeri Jember</p>
+        </div>
+
+        <!-- Kolom 2: Tentang Kami + KONTAK -->
+        <div class="footer-menu-column">
+          <h4>Tentang kami</h4>
+          <a href="/tentang.html">Sejarah</a>
+          <a href="/tentang.html">Visi misi</a>
+          <a href="/tentang.html">Tentang Sarden</a>
+
+          <h4 style="margin-top: 15px;">Kontak</h4>
+          <a href="/kontak.html">Hubungi Kami</a>
+        </div>
+
+        <!-- Kolom 3: Produk Kami -->
+        <div class="footer-menu-column">
+          <h4>Produk Kami</h4>
+          <a href="/produk.html">Detail produk</a>
+          <a href="/informasi.html">Informasi keamanan produk</a>
+        </div>
+
+        <!-- Kolom 4: Proses pembuatan -->
+        <div class="footer-menu-column">
+          <h4>Proses pembuatan</h4>
+          <a href="/tahapan.html">Tahapan</a>
+          <a href="/alat.html">Alat alat</a>
+        </div>
+
+        <!-- Kolom 5: Berita -->
+        <div class="footer-menu-column">
+          <h4>Berita</h4>
+          <a href="/kegiatan.html">Kegiatan</a>
+          <a href="/inovasi.html">Inovasi</a>
+          <a href="/pencapaian.html">Pencapaian</a>
+        </div>
+      </div>
     </div>
 
-    <div class="footer-menu">
-      <!-- Kolom 1: Alamat -->
-      <div class="footer-menu-column">
-        <h4>Alamat</h4>
-        <p>Alamat RPVG+PQJ, Jl. Tawang Mangu,<br>Lingkungan Panji, Tegalgede,<br>Kec. Sumbersari, Kabupaten Jember, Jawa Timur 68124<br>Politeknik Negeri Jember</p>
-      </div>
-
-      <!-- Kolom 2: Tentang Kami + KONTAK -->
-      <div class="footer-menu-column">
-        <h4>Tentang kami</h4>
-        <a href="/tentang.html">Sejarah</a>
-        <a href="/tentang.html">Visi misi</a>
-        <a href="/tentang.html">Tentang Sarden</a>
-
-        <!-- Tambahkan "Kontak" di sini (bukan sebagai kolom terpisah) -->
-        <h4 style="margin-top: 15px;">Kontak</h4>
-        <a href="/kontak.html">Hubungi Kami</a>
-      </div>
-
-      <!-- Kolom 3: Produk Kami -->
-      <div class="footer-menu-column">
-        <h4>Produk Kami</h4>
-        <a href="/produk.html">Detail produk</a>
-        <a href="/informasi.html">Informasi keamanan produk</a>
-      </div>
-
-      <!-- Kolom 4: Proses pembuatan -->
-      <div class="footer-menu-column">
-        <h4>Proses pembuatan</h4>
-        <a href="/tahapan.html">Tahapan</a>
-        <a href="/alat.html">Alat alat</a>
-      </div>
-
-      <!-- Kolom 5: Berita -->
-      <div class="footer-menu-column">
-        <h4>Berita</h4>
-        <a href="/kegiatan.html">Kegiatan</a>
-        <a href="/inovasi.html">Inovasi</a>
-        <a href="/pencapaian.html">Pencapaian</a>
-      </div>
+    <div class="footer-bottom">
+      <h3>Smart, Innovative, Professional</h3>
     </div>
-  </div>
-
-  <div class="footer-bottom">
-    <h3>Smart, Innovative, Professional</h3>
-  </div>
-</footer>
+  </footer>
+  
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
   <script>
     // Data berita inovasi
@@ -194,6 +231,13 @@
         content: `
           <p>TEFA Polije telah mengimplementasikan teknologi retort generasi terbaru yang mampu meningkatkan efisiensi produksi hingga 40%. Teknologi ini dilengkapi dengan sistem kontrol otomatis yang lebih presisi dalam mengatur suhu dan tekanan selama proses sterilisasi.</p>
           <p>Dengan teknologi retort terbaru ini, waktu proses sterilisasi dapat dikurangi tanpa mengurangi efektivitas pembunuhan mikroorganisme. Hal ini tidak hanya meningkatkan produktivitas, tetapi juga menghemat energi dan biaya operasional.</p>
+          <p><strong>Fitur Teknologi Baru:</strong></p>
+          <ul>
+            <li>Sistem kontrol suhu otomatis dengan akurasi ±0.5°C</li>
+            <li>Pengaturan tekanan yang lebih presisi</li>
+            <li>Monitoring real-time selama proses sterilisasi</li>
+            <li>Sistem pencatatan data otomatis untuk quality control</li>
+          </ul>
           <p>Inovasi ini merupakan hasil kolaborasi antara TEFA Polije dengan industri teknologi pangan internasional, yang bertujuan untuk meningkatkan daya saing produk sarden kaleng lokal di pasar global.</p>
         `
       },
@@ -204,10 +248,53 @@
         image: '/inovasi2.jpg',
         content: `
           <p>TEFA Polije mengembangkan inovasi kemasan ramah lingkungan untuk produk sarden kaleng. Kemasan baru ini menggunakan material yang dapat didaur ulang 100% dan menggunakan tinta berbasis air yang lebih aman bagi lingkungan.</p>
-          <p>Desain kemasan juga dioptimalkan untuk mengurangi penggunaan material tanpa mengurangi fungsi proteksi terhadap produk. Inovasi ini sejalan dengan komitmen TEFA Polije dalam mendukung program pembangunan berkelanjutan.</p>
-          <p>Kemasan ramah lingkungan ini telah mendapat respons positif dari konsumen dan diharapkan dapat menjadi standar baru dalam industri pengalengan ikan di Indonesia.</p>
+          <p>Desain kemasan juga dioptimalkan untuk mengurangi penggunaan material tanpa mengurangi fungsi proteksi terhadap produk. Pengurangan material mencapai 15% dibandingkan kemasan konvensional.</p>
+          <p><strong>Keunggulan Kemasan Ramah Lingkungan:</strong></p>
+          <ul>
+            <li>Material 100% dapat didaur ulang</li>
+            <li>Penggunaan tinta berbasis air (water-based ink)</li>
+            <li>Desain yang mengoptimalkan ruang penyimpanan</li>
+            <li>Label informasi yang lebih informatif dan mudah dibaca</li>
+          </ul>
+          <p>Inovasi ini sejalan dengan komitmen TEFA Polije dalam mendukung program pembangunan berkelanjutan dan mengurangi dampak lingkungan dari industri pengalengan ikan.</p>
         `
       },
+      'inovasi3': {
+        title: 'Pengembangan sistem monitoring IoT untuk proses sterilisasi sarden kaleng',
+        category: 'Inovasi',
+        date: '10 Desember 2023',
+        image: '/inovasi3.jpg',
+        content: `
+          <p>TEFA Polije mengembangkan sistem monitoring berbasis Internet of Things (IoT) untuk memantau proses sterilisasi sarden kaleng secara real-time. Sistem ini memungkinkan pengawasan yang lebih ketat dan akurat terhadap parameter kritis selama proses produksi.</p>
+          <p>Sistem IoT ini dilengkapi dengan sensor suhu, tekanan, dan kelembaban yang terhubung ke platform cloud. Data yang dikumpulkan dapat diakses melalui dashboard online dari berbagai perangkat.</p>
+          <p><strong>Fitur Sistem IoT:</strong></p>
+          <ul>
+            <li>Monitoring real-time suhu dan tekanan retort</li>
+            <li>Notifikasi otomatis jika parameter melewati batas aman</li>
+            <li>Pencatatan data otomatis untuk audit trail</li>
+            <li>Analisis data untuk optimasi proses produksi</li>
+          </ul>
+          <p>Dengan sistem ini, kualitas produk dapat dijaga secara konsisten dan efisiensi produksi dapat ditingkatkan melalui data-driven decision making.</p>
+        `
+      },
+      'inovasi4': {
+        title: 'Inovasi varian rasa sarden kaleng dengan bahan rempah lokal Indonesia',
+        category: 'Inovasi',
+        date: '5 Desember 2023',
+        image: '/inovasi4.jpg',
+        content: `
+          <p>TEFA Polije berinovasi dengan mengembangkan varian rasa sarden kaleng yang memanfaatkan kekayaan rempah-rempah lokal Indonesia. Varian baru ini tidak hanya menawarkan cita rasa yang unik tetapi juga nilai tambah kesehatan dari rempah-rempah tradisional.</p>
+          <p>Beberapa varian rasa yang dikembangkan antara lain sarden dengan bumbu kunyit, jahe, temulawak, dan kombinasi rempah khas Nusantara lainnya. Setiap varian dirancang dengan formulasi khusus untuk menjaga keseimbangan rasa dan manfaat kesehatan.</p>
+          <p><strong>Varian Rasa Baru:</strong></p>
+          <ul>
+            <li>Sarden Kunyit: Mengandung kurkumin untuk anti-inflamasi</li>
+            <li>Sarden Jahe: Membantu meningkatkan sistem imun</li>
+            <li>Sarden Temulawak: Baik untuk kesehatan pencernaan</li>
+            <li>Sarden Rempah Nusantara: Kombinasi rempah khas Indonesia</li>
+          </ul>
+          <p>Inovasi ini tidak hanya meningkatkan daya tarik produk tetapi juga mendukung pelestarian rempah-rempah lokal Indonesia sekaligus memberikan nilai tambah kesehatan bagi konsumen.</p>
+        `
+      }
     };
 
     // Fungsi untuk menampilkan detail berita
