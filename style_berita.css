@@ -299,7 +299,6 @@ body {
 
 /* === BOOTSTRAP UTILITY OVERRIDES === */
 
-/* Pastikan class Bootstrap tidak mengganggu styling custom */
 .news-nav-item.bootstrap-btn {
     background: white;
     border: 2px solid var(--primary-red);
@@ -325,7 +324,6 @@ body {
     box-shadow: 0 4px 12px rgba(179, 16, 17, 0.3);
 }
 
-/* === PERBAIKAN UKURAN GAMBAR SAMA === */
 .news-item-fixed {
     background: white;
     border-radius: 12px;
@@ -345,15 +343,15 @@ body {
 
 .news-image-fixed {
     width: 100%;
-    height: 220px; /* Tinggi tetap sama */
+    height: 220px; 
     overflow: hidden;
-    flex-shrink: 0; /* Pastikan tidak mengecil */
+    flex-shrink: 0; 
 }
 
 .news-image-fixed img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cover agar mengisi area tanpa distorsi */
+    object-fit: cover; 
     transition: transform 0.3s;
 }
 
@@ -363,7 +361,7 @@ body {
 
 .news-content-fixed {
     padding: 20px;
-    flex-grow: 1; /* Konten mengisi sisa ruang */
+    flex-grow: 1; 
     display: flex;
     flex-direction: column;
 }
@@ -410,7 +408,7 @@ body {
     font-size: 13px;
     color: #999;
     font-weight: 500;
-    margin-top: auto; /* Tanggal selalu di bawah */
+    margin-top: auto; 
 }
 
 /* === RESPONSIVE === */
