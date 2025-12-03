@@ -4,9 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inovasi - TEFA Pengalengan Ikan</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Poppins Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/style_berita.css">
+  <link rel="stylesheet" href="/style_berita_bootstrap.css">
 </head>
 <body>
   <!-- Navigation -->
@@ -50,57 +57,61 @@
     <div class="container">
       
       <!-- Page Title -->
-      <h1 class="page-title">Berita Inovasi</h1>
+      <h1 class="page-title-custom">Berita Inovasi</h1>
       
       <!-- News Navigation -->
-      <div class="news-nav">
+      <div class="d-flex justify-content-center gap-3 mb-5 flex-wrap">
         <a href="/kegiatan.html">
-          <button class="news-nav-item">
-            <i class="fas fa-calendar-alt"></i>Kegiatan
+          <button class="news-nav-item-custom">
+            <i class="fas fa-calendar-alt me-2"></i>Kegiatan
           </button>
         </a>
         <a href="/inovasi.html">
-          <button class="news-nav-item active">
-            <i class="fas fa-lightbulb"></i>Inovasi
+          <button class="news-nav-item-custom active">
+            <i class="fas fa-lightbulb me-2"></i>Inovasi
           </button>
         </a>
         <a href="/pencapaian.html">
-          <button class="news-nav-item">
-            <i class="fas fa-trophy"></i>Pencapaian
+          <button class="news-nav-item-custom">
+            <i class="fas fa-trophy me-2"></i>Pencapaian
           </button>
         </a>
       </div>
 
       <!-- Section: Inovasi -->
       <section id="inovasi" class="news-section active">
-        <div class="news-grid">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
           <!-- News Item 1 -->
-          <div class="news-item" onclick="showDetail('inovasi1')">
-            <div class="news-image">
-              <img src="/inovasi1.jpg" alt="Teknologi Retort Terbaru">
-            </div>
-            <div class="news-content">
-              <div class="news-categories">
-                <span class="category-tag">Inovasi</span>
+          <div class="col">
+            <div class="news-item-custom h-100" onclick="showDetail('inovasi1')">
+              <div class="news-image-custom">
+                <img src="/inovasi1.jpg" class="img-fluid" alt="Teknologi Retort Terbaru">
               </div>
-              <h3 class="news-title">TEFA Polije implementasikan teknologi retort terbaru untuk tingkatkan efisiensi produksi</h3>
-              <p class="news-summary">Implementasi teknologi retort terbaru yang mampu meningkatkan efisiensi produksi hingga 40% dengan tetap menjaga kualitas produk.</p>
-              <div class="news-date">20 Desember 2023</div>
+              <div class="news-content-custom">
+                <div class="mb-2">
+                  <span class="category-tag-custom">Inovasi</span>
+                </div>
+                <h3 class="news-title-custom">TEFA Polije implementasikan teknologi retort terbaru untuk tingkatkan efisiensi produksi</h3>
+                <p class="news-summary-custom">Implementasi teknologi retort terbaru yang mampu meningkatkan efisiensi produksi hingga 40% dengan tetap menjaga kualitas produk.</p>
+                <div class="news-date-custom">20 Desember 2023</div>
+              </div>
             </div>
           </div>
 
           <!-- News Item 2 -->
-          <div class="news-item" onclick="showDetail('inovasi2')">
-            <div class="news-image">
-              <img src="/inovasi2.jpg" alt="Kemasan Ramah Lingkungan">
-            </div>
-            <div class="news-content">
-              <div class="news-categories">
-                <span class="category-tag">Inovasi</span>
+          <div class="col">
+            <div class="news-item-custom h-100" onclick="showDetail('inovasi2')">
+              <div class="news-image-custom">
+                <img src="/inovasi2.jpg" class="img-fluid" alt="Kemasan Ramah Lingkungan">
               </div>
-              <h3 class="news-title">Inovasi kemasan ramah lingkungan untuk produk sarden kaleng TEFA Polije</h3>
-              <p class="news-summary">Pengembangan kemasan ramah lingkungan yang dapat didaur ulang dan mengurangi dampak terhadap lingkungan.</p>
-              <div class="news-date">15 Desember 2023</div>
+              <div class="news-content-custom">
+                <div class="mb-2">
+                  <span class="category-tag-custom">Inovasi</span>
+                </div>
+                <h3 class="news-title-custom">Inovasi kemasan ramah lingkungan untuk produk sarden kaleng TEFA Polije</h3>
+                <p class="news-summary-custom">Pengembangan kemasan ramah lingkungan yang dapat didaur ulang dan mengurangi dampak terhadap lingkungan.</p>
+                <div class="news-date-custom">15 Desember 2023</div>
+              </div>
             </div>
           </div>
         </div>
@@ -108,14 +119,14 @@
 
       <!-- Section: Detail Berita -->
       <section id="detail-berita" class="news-section">
-        <div class="berita-detail">
-          <h2 id="detail-title" class="page-title">Judul Berita</h2>
-          <div class="meta text-muted mb-3" id="detail-meta">Tanggal: | Kategori: </div>
+        <div class="berita-detail-custom p-4 p-md-5">
+          <h2 id="detail-title" class="page-title-custom mb-3">Judul Berita</h2>
+          <div class="meta-custom mb-4" id="detail-meta">Tanggal: | Kategori: </div>
           <img id="detail-image" src="" alt="Gambar Berita" class="img-fluid rounded mb-4">
-          <div class="content mb-4" id="detail-content">
+          <div class="content-custom mb-5" id="detail-content">
           </div>
-          <button class="btn btn-danger" onclick="hideDetail()">
-            <i class="fas fa-arrow-left"></i>Kembali ke Berita
+          <button class="btn-custom-danger" onclick="hideDetail()">
+            <i class="fas fa-arrow-left me-2"></i>Kembali ke Berita
           </button>
         </div>
       </section>
@@ -124,64 +135,67 @@
   </main>
 
   <!-- Footer -->
-<footer>
-  <div class="footer-container">
-    <div class="footer-brand">
-      <div class="footer-logos">
-        <img src="/logopolije.png" alt="Logo Polije">
-        <img src="/Logosip.png" alt="Logo SIP">
-        <img src="/Logotefa.png" alt="Logo TEFA">
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logos">
+          <img src="/logopolije.png" alt="Logo Polije">
+          <img src="/Logosip.png" alt="Logo SIP">
+          <img src="/Logotefa.png" alt="Logo TEFA">
+        </div>
+        <span class="footer-text">Tefa Pengalengan</span>
       </div>
-      <span class="footer-text">Tefa Pengalengan</span>
+
+      <div class="footer-menu">
+        <!-- Kolom 1: Alamat -->
+        <div class="footer-menu-column">
+          <h4>Alamat</h4>
+          <p>Alamat RPVG+PQJ, Jl. Tawang Mangu,<br>Lingkungan Panji, Tegalgede,<br>Kec. Sumbersari, Kabupaten Jember, Jawa Timur 68124<br>Politeknik Negeri Jember</p>
+        </div>
+
+        <!-- Kolom 2: Tentang Kami + KONTAK -->
+        <div class="footer-menu-column">
+          <h4>Tentang kami</h4>
+          <a href="/tentang.html">Sejarah</a>
+          <a href="/tentang.html">Visi misi</a>
+          <a href="/tentang.html">Tentang Sarden</a>
+
+          <!-- Tambahkan "Kontak" di sini (bukan sebagai kolom terpisah) -->
+          <h4 style="margin-top: 15px;">Kontak</h4>
+          <a href="/kontak.html">Hubungi Kami</a>
+        </div>
+
+        <!-- Kolom 3: Produk Kami -->
+        <div class="footer-menu-column">
+          <h4>Produk Kami</h4>
+          <a href="/produk.html">Detail produk</a>
+          <a href="/informasi.html">Informasi keamanan produk</a>
+        </div>
+
+        <!-- Kolom 4: Proses pembuatan -->
+        <div class="footer-menu-column">
+          <h4>Proses pembuatan</h4>
+          <a href="/tahapan.html">Tahapan</a>
+          <a href="/alat.html">Alat alat</a>
+        </div>
+
+        <!-- Kolom 5: Berita -->
+        <div class="footer-menu-column">
+          <h4>Berita</h4>
+          <a href="/kegiatan.html">Kegiatan</a>
+          <a href="/inovasi.html">Inovasi</a>
+          <a href="/pencapaian.html">Pencapaian</a>
+        </div>
+      </div>
     </div>
 
-    <div class="footer-menu">
-      <!-- Kolom 1: Alamat -->
-      <div class="footer-menu-column">
-        <h4>Alamat</h4>
-        <p>Alamat RPVG+PQJ, Jl. Tawang Mangu,<br>Lingkungan Panji, Tegalgede,<br>Kec. Sumbersari, Kabupaten Jember, Jawa Timur 68124<br>Politeknik Negeri Jember</p>
-      </div>
-
-      <!-- Kolom 2: Tentang Kami + KONTAK -->
-      <div class="footer-menu-column">
-        <h4>Tentang kami</h4>
-        <a href="/tentang.html">Sejarah</a>
-        <a href="/tentang.html">Visi misi</a>
-        <a href="/tentang.html">Tentang Sarden</a>
-
-        <!-- Tambahkan "Kontak" di sini (bukan sebagai kolom terpisah) -->
-        <h4 style="margin-top: 15px;">Kontak</h4>
-        <a href="/kontak.html">Hubungi Kami</a>
-      </div>
-
-      <!-- Kolom 3: Produk Kami -->
-      <div class="footer-menu-column">
-        <h4>Produk Kami</h4>
-        <a href="/produk.html">Detail produk</a>
-        <a href="/informasi.html">Informasi keamanan produk</a>
-      </div>
-
-      <!-- Kolom 4: Proses pembuatan -->
-      <div class="footer-menu-column">
-        <h4>Proses pembuatan</h4>
-        <a href="/tahapan.html">Tahapan</a>
-        <a href="/alat.html">Alat alat</a>
-      </div>
-
-      <!-- Kolom 5: Berita -->
-      <div class="footer-menu-column">
-        <h4>Berita</h4>
-        <a href="/kegiatan.html">Kegiatan</a>
-        <a href="/inovasi.html">Inovasi</a>
-        <a href="/pencapaian.html">Pencapaian</a>
-      </div>
+    <div class="footer-bottom">
+      <h3>Smart, Innovative, Professional</h3>
     </div>
-  </div>
-
-  <div class="footer-bottom">
-    <h3>Smart, Innovative, Professional</h3>
-  </div>
-</footer>
+  </footer>
+  
+  <!-- Bootstrap 5 JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
   <script>
     // Data berita inovasi

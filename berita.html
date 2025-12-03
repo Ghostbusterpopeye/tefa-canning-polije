@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kegiatan - TEFA Pengalengan Ikan</title>
+  <title>Berita - TEFA Pengalengan Ikan</title>
   
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  
-  <!-- CSS Custom -->
+  <!-- Poppins Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/style_berita_bootstrap.css">
 </head>
 <body>
   <!-- Navigation -->
@@ -39,7 +40,7 @@
           </div>
         </li>
         <li class="dropdown">
-          <a href="/kegiatan.html" class="active">BERITA</a>
+          <a href="/berita.html" class="active">BERITA</a>
           <div class="dropdown-content">
             <a href="/kegiatan.html">Kegiatan</a>
             <a href="/inovasi.html">Inovasi</a>
@@ -56,78 +57,173 @@
     <div class="container">
       
       <!-- Page Title -->
-      <h1 class="text-center mb-4" style="color: #B31011; font-weight: 700;">Berita Kegiatan</h1>
+      <h1 class="page-title-custom">Semua Berita TEFA Pengalengan</h1>
       
       <!-- News Navigation -->
-      <div class="d-flex justify-content-center flex-wrap gap-3 mb-5">
-        <a href="/kegiatan.html" class="text-decoration-none">
-          <button class="btn btn-outline-danger d-flex align-items-center px-4 py-2 rounded-pill active">
+      <div class="d-flex justify-content-center gap-3 mb-5 flex-wrap">
+        <a href="/kegiatan.html">
+          <button class="news-nav-item-custom">
             <i class="fas fa-calendar-alt me-2"></i>Kegiatan
           </button>
         </a>
-        <a href="/inovasi.html" class="text-decoration-none">
-          <button class="btn btn-outline-danger d-flex align-items-center px-4 py-2 rounded-pill">
+        <a href="/inovasi.html">
+          <button class="news-nav-item-custom">
             <i class="fas fa-lightbulb me-2"></i>Inovasi
           </button>
         </a>
-        <a href="/pencapaian.html" class="text-decoration-none">
-          <button class="btn btn-outline-danger d-flex align-items-center px-4 py-2 rounded-pill">
+        <a href="/pencapaian.html">
+          <button class="news-nav-item-custom">
             <i class="fas fa-trophy me-2"></i>Pencapaian
           </button>
         </a>
       </div>
 
-      <!-- Section: Kegiatan -->
-      <section id="kegiatan" class="news-section active">
-        <div class="row g-4">
-          <!-- News Item 1 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm" onclick="showDetail('kegiatan1')" style="cursor: pointer;">
-              <img src="/audit SNI.jpg" class="card-img-top" alt="Audit SN TEFA Canning" style="height: 200px; object-fit: cover;">
-              <div class="card-body">
-                <span class="badge bg-danger mb-2">Kegiatan</span>
-                <h5 class="card-title fw-bold">Politeknik Negeri Jember laksanakan audit SNI untuk produk sarden kaleng di TEFA Canning</h5>
-                <p class="card-text text-secondary">Audit Standar Nasional Indonesia (SNI) untuk produk sarden kaleng di Teaching Factory (TEFA) Canning sebagai langkah penting dalam memastikan kualitas dan keamanan produk.</p>
-                <div class="text-muted small">15 November 2023</div>
+      <!-- Section: Semua Berita -->
+      <section id="semua-berita" class="news-section active">
+        <!-- Berita Kegiatan -->
+        <div class="mb-5">
+          <h2 class="h3 mb-4 d-flex justify-content-between align-items-center">
+            <span><i class="fas fa-calendar-alt text-danger me-2"></i>Berita Kegiatan</span>
+            <a href="/kegiatan.html" class="btn btn-sm btn-outline-danger">Lihat Semua</a>
+          </h2>
+          
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
+            <!-- News Item 1 -->
+            <div class="col">
+              <div class="news-item-custom h-100" onclick="showDetail('kegiatan1')">
+                <div class="news-image-custom">
+                  <img src="/audit SNI.jpg" class="img-fluid" alt="Audit SN TEFA Canning">
+                </div>
+                <div class="news-content-custom">
+                  <div class="mb-2">
+                    <span class="category-tag-custom">Kegiatan</span>
+                  </div>
+                  <h3 class="news-title-custom">Politeknik Negeri Jember laksanakan audit SNI untuk produk sarden kaleng di TEFA Canning</h3>
+                  <p class="news-summary-custom">Audit Standar Nasional Indonesia (SNI) untuk produk sarden kaleng di Teaching Factory (TEFA) Canning sebagai langkah penting dalam memastikan kualitas dan keamanan produk.</p>
+                  <div class="news-date-custom">15 November 2023</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- News Item 2 -->
+            <div class="col">
+              <div class="news-item-custom h-100" onclick="showDetail('kegiatan2')">
+                <div class="news-image-custom">
+                  <img src="/produkmahasiswa.jpg" class="img-fluid" alt="Produk Pangan Kaleng Mahasiswa">
+                </div>
+                <div class="news-content-custom">
+                  <div class="mb-2">
+                    <span class="category-tag-custom">Kegiatan</span>
+                  </div>
+                  <h3 class="news-title-custom">Sarden SARDEN SIP POLIJE: Produk pangan kaleng higienis hasil produksi mahasiswa kompeten</h3>
+                  <p class="news-summary-custom">Produk pangan kaleng higienis hasil produksi mahasiswa yang kompeten di bidang pengalengan ikan.</p>
+                  <div class="news-date-custom">10 November 2023</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- News Item 3 -->
+            <div class="col">
+              <div class="news-item-custom h-100" onclick="showDetail('kegiatan3')">
+                <div class="news-image-custom">
+                  <img src="/proseskrusial.jpg" class="img-fluid" alt="Proses Krusial Pengalengan">
+                </div>
+                <div class="news-content-custom">
+                  <div class="mb-2">
+                    <span class="category-tag-custom">Kegiatan</span>
+                  </div>
+                  <h3 class="news-title-custom">Jamin mutu pangan: mahasiswa POLIJE pelajari proses krusial pengalengan ikan di mesin retort</h3>
+                  <p class="news-summary-custom">Mahasiswa POLIJE mempelajari proses krusial pengalengan ikan di mesin retort untuk menjamin mutu pangan.</p>
+                  <div class="news-date-custom">5 November 2023</div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- News Item 2 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm" onclick="showDetail('kegiatan2')" style="cursor: pointer;">
-              <img src="/produkmahasiswa.jpg" class="card-img-top" alt="Produk Pangan Kaleng Mahasiswa" style="height: 200px; object-fit: cover;">
-              <div class="card-body">
-                <span class="badge bg-danger mb-2">Kegiatan</span>
-                <h5 class="card-title fw-bold">Sarden SARDEN SIP POLIJE: Produk pangan kaleng higienis hasil produksi mahasiswa kompeten</h5>
-                <p class="card-text text-secondary">Produk pangan kaleng higienis hasil produksi mahasiswa yang kompeten di bidang pengalengan ikan.</p>
-                <div class="text-muted small">10 November 2023</div>
+        <!-- Berita Inovasi -->
+        <div class="mb-5">
+          <h2 class="h3 mb-4 d-flex justify-content-between align-items-center">
+            <span><i class="fas fa-lightbulb text-danger me-2"></i>Berita Inovasi</span>
+            <a href="/inovasi.html" class="btn btn-sm btn-outline-danger">Lihat Semua</a>
+          </h2>
+          
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
+            <!-- News Item 1 -->
+            <div class="col">
+              <div class="news-item-custom h-100" onclick="showDetail('inovasi1')">
+                <div class="news-image-custom">
+                  <img src="/inovasi1.jpg" class="img-fluid" alt="Teknologi Retort Terbaru">
+                </div>
+                <div class="news-content-custom">
+                  <div class="mb-2">
+                    <span class="category-tag-custom">Inovasi</span>
+                  </div>
+                  <h3 class="news-title-custom">TEFA Polije implementasikan teknologi retort terbaru untuk tingkatkan efisiensi produksi</h3>
+                  <p class="news-summary-custom">Implementasi teknologi retort terbaru yang mampu meningkatkan efisiensi produksi hingga 40% dengan tetap menjaga kualitas produk.</p>
+                  <div class="news-date-custom">20 Desember 2023</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- News Item 2 -->
+            <div class="col">
+              <div class="news-item-custom h-100" onclick="showDetail('inovasi2')">
+                <div class="news-image-custom">
+                  <img src="/inovasi2.jpg" class="img-fluid" alt="Kemasan Ramah Lingkungan">
+                </div>
+                <div class="news-content-custom">
+                  <div class="mb-2">
+                    <span class="category-tag-custom">Inovasi</span>
+                  </div>
+                  <h3 class="news-title-custom">Inovasi kemasan ramah lingkungan untuk produk sarden kaleng TEFA Polije</h3>
+                  <p class="news-summary-custom">Pengembangan kemasan ramah lingkungan yang dapat didaur ulang dan mengurangi dampak terhadap lingkungan.</p>
+                  <div class="news-date-custom">15 Desember 2023</div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- News Item 3 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm" onclick="showDetail('kegiatan3')" style="cursor: pointer;">
-              <img src="/proseskrusial.jpg" class="card-img-top" alt="Proses Krusial Pengalengan" style="height: 200px; object-fit: cover;">
-              <div class="card-body">
-                <span class="badge bg-danger mb-2">Kegiatan</span>
-                <h5 class="card-title fw-bold">Jamin mutu pangan: mahasiswa POLIJE pelajari proses krusial pengalengan ikan di mesin retort</h5>
-                <p class="card-text text-secondary">Mahasiswa POLIJE mempelajari proses krusial pengalengan ikan di mesin retort untuk menjamin mutu pangan.</p>
-                <div class="text-muted small">5 November 2023</div>
+        <!-- Berita Pencapaian -->
+        <div class="mb-5">
+          <h2 class="h3 mb-4 d-flex justify-content-between align-items-center">
+            <span><i class="fas fa-trophy text-danger me-2"></i>Berita Pencapaian</span>
+            <a href="/pencapaian.html" class="btn btn-sm btn-outline-danger">Lihat Semua</a>
+          </h2>
+          
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- News Item 1 -->
+            <div class="col">
+              <div class="news-item-custom h-100" onclick="showDetail('pencapaian1')">
+                <div class="news-image-custom">
+                  <img src="/pencapian1.png" class="img-fluid" alt="Sertifikasi SNI">
+                </div>
+                <div class="news-content-custom">
+                  <div class="mb-2">
+                    <span class="category-tag-custom">Pencapaian</span>
+                  </div>
+                  <h3 class="news-title-custom">Cetar! Dosen Polije Kembangkan Produk Surimi</h3>
+                  <p class="news-summary-custom">Dosen Polije berhasil mengembangkan produk surimi yang inovatif dan berkualitas tinggi.</p>
+                  <div class="news-date-custom">25 Januari 2024</div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- News Item 4 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm" onclick="showDetail('kegiatan4')" style="cursor: pointer;">
-              <img src="/Praktik Pengalengan.jpg" class="card-img-top" alt="Praktik Pengalengan Ikan" style="height: 200px; object-fit: cover;">
-              <div class="card-body">
-                <span class="badge bg-danger mb-2">Kegiatan</span>
-                <h5 class="card-title fw-bold">TEFA POLIJE gelar praktik pengalengan ikan, terapkan standar higienis global</h5>
-                <p class="card-text text-secondary">TEFA POLIJE menggelar praktik pengalengan ikan dengan menerapkan standar higienis global.</p>
-                <div class="text-muted small">1 November 2023</div>
+            <!-- News Item 2 -->
+            <div class="col">
+              <div class="news-item-custom h-100" onclick="showDetail('pencapaian2')">
+                <div class="news-image-custom">
+                  <img src="/pencapaian2.jpg" class="img-fluid" alt="Penghargaan Inovasi">
+                </div>
+                <div class="news-content-custom">
+                  <div class="mb-2">
+                    <span class="category-tag-custom">Pencapaian</span>
+                  </div>
+                  <h3 class="news-title-custom">Sarden SIP raih juara pertama lomba inovasi produk pangan nasional</h3>
+                  <p class="news-summary-custom">Prestasi membanggakan dengan meraih juara pertama dalam lomba inovasi produk pangan tingkat nasional.</p>
+                  <div class="news-date-custom">20 Januari 2024</div>
+                </div>
               </div>
             </div>
           </div>
@@ -135,17 +231,16 @@
       </section>
 
       <!-- Section: Detail Berita -->
-      <section id="detail-berita" class="news-section d-none">
-        <div class="card border-0 shadow-sm">
-          <div class="card-body p-4 p-md-5">
-            <h2 id="detail-title" class="card-title mb-3" style="color: #B31011; font-weight: 700;"></h2>
-            <div class="text-muted mb-4" id="detail-meta"></div>
-            <img id="detail-image" src="" alt="Gambar Berita" class="img-fluid rounded mb-4" style="max-height: 400px; width: 100%; object-fit: cover;">
-            <div class="content mb-4" id="detail-content"></div>
-            <button class="btn btn-danger d-flex align-items-center" onclick="hideDetail()">
-              <i class="fas fa-arrow-left me-2"></i>Kembali ke Berita
-            </button>
+      <section id="detail-berita" class="news-section">
+        <div class="berita-detail-custom p-4 p-md-5">
+          <h2 id="detail-title" class="page-title-custom mb-3">Judul Berita</h2>
+          <div class="meta-custom mb-4" id="detail-meta">Tanggal: | Kategori: </div>
+          <img id="detail-image" src="" alt="Gambar Berita" class="img-fluid rounded mb-4">
+          <div class="content-custom mb-5" id="detail-content">
           </div>
+          <button class="btn-custom-danger" onclick="hideDetail()">
+            <i class="fas fa-arrow-left me-2"></i>Kembali ke Berita
+          </button>
         </div>
       </section>
 
@@ -212,11 +307,11 @@
     </div>
   </footer>
   
-  <!-- Bootstrap 5 JS -->
+  <!-- Bootstrap 5 JS Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
   <script>
-    // Data berita kegiatan
+    // Data semua berita
     const beritaData = {
       'kegiatan1': {
         title: 'Politeknik Negeri Jember laksanakan audit SNI untuk produk sarden kaleng di TEFA Canning',
@@ -249,14 +344,49 @@
           <p>Dalam kegiatan praktik ini, mahasiswa belajar mengoperasikan mesin retort dengan parameter yang tepat seperti suhu, tekanan, dan waktu sterilisasi. Pemahaman yang baik tentang proses ini sangat penting untuk menjamin mutu dan keamanan produk pangan kaleng.</p>
         `
       },
-      'kegiatan4': {
-        title: 'TEFA POLIJE gelar praktik pengalengan ikan, terapkan standar higienis global',
-        category: 'Kegiatan',
-        date: '1 November 2023',
-        image: '/Praktik Pengalengan.jpg',
+      'inovasi1': {
+        title: 'TEFA Polije implementasikan teknologi retort terbaru untuk tingkatkan efisiensi produksi',
+        category: 'Inovasi',
+        date: '20 Desember 2023',
+        image: '/inovasi1.jpg',
         content: `
-          <p>TEFA Polije menggelar praktik pengalengan ikan dengan menerapkan standar higienis global. Kegiatan ini melibatkan mahasiswa dalam seluruh proses produksi mulai dari persiapan bahan baku hingga pengemasan produk akhir.</p>
-          <p>Standar higienis global yang diterapkan meliputi penggunaan APD (Alat Pelindung Diri) yang lengkap, sanitasi area produksi, dan penerapan prinsip HACCP (Hazard Analysis Critical Control Point). Dengan standar ini, produk yang dihasilkan dapat memenuhi persyaratan pasar domestik maupun internasional.</p>
+          <p>TEFA Polije telah mengimplementasikan teknologi retort generasi terbaru yang mampu meningkatkan efisiensi produksi hingga 40%. Teknologi ini dilengkapi dengan sistem kontrol otomatis yang lebih presisi dalam mengatur suhu dan tekanan selama proses sterilisasi.</p>
+          <p>Dengan teknologi retort terbaru ini, waktu proses sterilisasi dapat dikurangi tanpa mengurangi efektivitas pembunuhan mikroorganisme. Hal ini tidak hanya meningkatkan produktivitas, tetapi juga menghemat energi dan biaya operasional.</p>
+          <p>Inovasi ini merupakan hasil kolaborasi antara TEFA Polije dengan industri teknologi pangan internasional, yang bertujuan untuk meningkatkan daya saing produk sarden kaleng lokal di pasar global.</p>
+        `
+      },
+      'inovasi2': {
+        title: 'Inovasi kemasan ramah lingkungan untuk produk sarden kaleng TEFA Polije',
+        category: 'Inovasi',
+        date: '15 Desember 2023',
+        image: '/inovasi2.jpg',
+        content: `
+          <p>TEFA Polije mengembangkan inovasi kemasan ramah lingkungan untuk produk sarden kaleng. Kemasan baru ini menggunakan material yang dapat didaur ulang 100% dan menggunakan tinta berbasis air yang lebih aman bagi lingkungan.</p>
+          <p>Desain kemasan juga dioptimalkan untuk mengurangi penggunaan material tanpa mengurangi fungsi proteksi terhadap produk. Inovasi ini sejalan dengan komitmen TEFA Polije dalam mendukung program pembangunan berkelanjutan.</p>
+          <p>Kemasan ramah lingkungan ini telah mendapat respons positif dari konsumen dan diharapkan dapat menjadi standar baru dalam industri pengalengan ikan di Indonesia.</p>
+        `
+      },
+      'pencapaian1': {
+        title: 'Cetar! Dosen Polije Kembangkan Produk Surimi',
+        category: 'Pencapaian',
+        date: '25 Januari 2024',
+        image: '/pencapian1.png',
+        content: `
+          <p>TEFA Jember - Dosen dan tim peneliti dari Politeknik Negeri Jember (Polije) berhasil mengembangkan produk surimi (lumatan daging ikan beku) yang inovatif dan berkualitas tinggi. Inisiatif ini merupakan bagian dari upaya Polije untuk meningkatkan nilai tambah produk perikanan dan mendukung sektor industri pengolahan hasil laut.</p>
+          <p>Pengembangan produk ini berfokus pada inovasi proses dan formulasi untuk menghasilkan surimi dengan karakteristik mutu yang unggul. Pencapaian ini didokumentasikan dalam kegiatan yang dilakukan oleh tim dosen Polije di bawah tema pengabdian kepada masyarakat.</p>
+          <p>Keberhasilan ini diharapkan dapat menjadi kontribusi nyata Polije dalam mendorong hilirisasi produk perikanan dan menciptakan peluang bisnis baru bagi masyarakat dan industri.</p>
+          <p> Tanggal Publikasi: 15 November 2023.</p>
+        `
+      },
+      'pencapaian2': {
+        title: 'Sarden SIP raih juara pertama lomba inovasi produk pangan nasional',
+        category: 'Pencapaian',
+        date: '20 Januari 2024',
+        image: '/pencapaian2.jpg',
+        content: `
+          <p>Sarden SIP berhasil meraih juara pertama dalam Lomba Inovasi Produk Pangan Nasional yang diselenggarakan oleh Kementerian Perindustrian. Pencapaian ini membuktikan bahwa produk sarden kaleng hasil karya mahasiswa dan dosen TEFA Polije mampu bersaing di tingkat nasional.</p>
+          <p>Penilaian lomba mencakup aspek inovasi produk, kualitas dan keamanan pangan, desain kemasan, serta strategi pemasaran. Tim juri memberikan apresiasi tinggi terhadap inovasi varian rasa dan penerapan teknologi modern dalam proses produksi.</p>
+          <p>Penghargaan ini memotivasi TEFA Polije untuk terus berinovasi dan menghasilkan produk-produk pangan berkualitas yang dapat berkontribusi bagi industri pangan nasional.</p>
         `
       }
     };
@@ -272,9 +402,9 @@
         document.getElementById('detail-image').alt = berita.title;
         document.getElementById('detail-content').innerHTML = berita.content;
         
-        // Hide kegiatan section and show detail
-        document.getElementById('kegiatan').classList.add('d-none');
-        document.getElementById('detail-berita').classList.remove('d-none');
+        // Hide semua berita section and show detail
+        document.getElementById('semua-berita').classList.remove('active');
+        document.getElementById('detail-berita').classList.add('active');
         
         // Scroll ke atas
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -283,9 +413,9 @@
 
     // Fungsi untuk menyembunyikan detail berita
     function hideDetail() {
-      // Kembali ke section kegiatan
-      document.getElementById('detail-berita').classList.add('d-none');
-      document.getElementById('kegiatan').classList.remove('d-none');
+      // Kembali ke section semua berita
+      document.getElementById('detail-berita').classList.remove('active');
+      document.getElementById('semua-berita').classList.add('active');
       
       // Scroll ke atas
       window.scrollTo({ top: 0, behavior: 'smooth' });
