@@ -115,18 +115,6 @@ h2.page-title {
   padding: 0 15px;
 }
 
-/* === LINK "LIHAT SEMUA" === */
-.lihat-semua {
-  color: var(--primary-red);
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.lihat-semua:hover {
-  text-decoration: underline;
-}
-
 /* === KONTEN UTAMA === */
 .main-content {
   padding-left: 20px;

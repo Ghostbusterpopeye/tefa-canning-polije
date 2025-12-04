@@ -189,23 +189,3 @@
   background-color: #8a0d0e; /* sedikit lebih gelap dari --primary-red */
   color: white;
 }
-
-/* Responsif */
-@media (max-width: 768px) {
-  .news-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .page-title {
-    font-size: 1.75rem;
-  }
-
-  .news-nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .berita-detail {
-    padding: 1.5rem;
-  }
-}
