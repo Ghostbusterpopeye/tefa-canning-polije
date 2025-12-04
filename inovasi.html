@@ -45,14 +45,9 @@
     </nav>
   </header>
 
-  <!-- Main Content -->
   <main class="py-5">
     <div class="container">
-      
-      <!-- Page Title -->
       <h1 class="page-title">Berita Inovasi</h1>
-      
-      <!-- News Navigation -->
       <div class="news-nav">
         <a href="/kegiatan.html">
           <button class="news-nav-item">
@@ -71,10 +66,8 @@
         </a>
       </div>
 
-      <!-- Section: Inovasi -->
       <section id="inovasi" class="news-section active">
         <div class="news-grid">
-          <!-- News Item 1 -->
           <div class="news-item" onclick="showDetail('inovasi1')">
             <div class="news-image">
               <img src="/inovasi1.jpg" alt="Teknologi Retort Terbaru">
@@ -89,7 +82,6 @@
             </div>
           </div>
 
-          <!-- News Item 2 -->
           <div class="news-item" onclick="showDetail('inovasi2')">
             <div class="news-image">
               <img src="/inovasi2.jpg" alt="Kemasan Ramah Lingkungan">
@@ -106,7 +98,6 @@
         </div>
       </section>
 
-      <!-- Section: Detail Berita -->
       <section id="detail-berita" class="news-section">
         <div class="berita-detail">
           <h2 id="detail-title" class="page-title">Judul Berita</h2>
@@ -123,7 +114,6 @@
     </div>
   </main>
 
-  <!-- Footer -->
 <footer>
   <div class="footer-container">
     <div class="footer-brand">
@@ -136,39 +126,32 @@
     </div>
 
     <div class="footer-menu">
-      <!-- Kolom 1: Alamat -->
       <div class="footer-menu-column">
         <h4>Alamat</h4>
         <p>Alamat RPVG+PQJ, Jl. Tawang Mangu,<br>Lingkungan Panji, Tegalgede,<br>Kec. Sumbersari, Kabupaten Jember, Jawa Timur 68124<br>Politeknik Negeri Jember</p>
       </div>
 
-      <!-- Kolom 2: Tentang Kami + KONTAK -->
       <div class="footer-menu-column">
         <h4>Tentang kami</h4>
         <a href="/tentang.html">Sejarah</a>
         <a href="/tentang.html">Visi misi</a>
         <a href="/tentang.html">Tentang Sarden</a>
-
-        <!-- Tambahkan "Kontak" di sini (bukan sebagai kolom terpisah) -->
         <h4 style="margin-top: 15px;">Kontak</h4>
         <a href="/kontak.html">Hubungi Kami</a>
       </div>
 
-      <!-- Kolom 3: Produk Kami -->
       <div class="footer-menu-column">
         <h4>Produk Kami</h4>
         <a href="/produk.html">Detail produk</a>
         <a href="/informasi.html">Informasi keamanan produk</a>
       </div>
 
-      <!-- Kolom 4: Proses pembuatan -->
       <div class="footer-menu-column">
         <h4>Proses pembuatan</h4>
         <a href="/tahapan.html">Tahapan</a>
         <a href="/alat.html">Alat alat</a>
       </div>
 
-      <!-- Kolom 5: Berita -->
       <div class="footer-menu-column">
         <h4>Berita</h4>
         <a href="/kegiatan.html">Kegiatan</a>
@@ -184,7 +167,6 @@
 </footer>
   
   <script>
-    // Data berita inovasi
     const beritaData = {
       'inovasi1': {
         title: 'TEFA Polije implementasikan teknologi retort terbaru untuk tingkatkan efisiensi produksi',
@@ -210,7 +192,6 @@
       },
     };
 
-    // Fungsi untuk menampilkan detail berita
     function showDetail(beritaId) {
       const berita = beritaData[beritaId];
       
@@ -220,23 +201,17 @@
         document.getElementById('detail-image').src = berita.image;
         document.getElementById('detail-image').alt = berita.title;
         document.getElementById('detail-content').innerHTML = berita.content;
-        
-        // Hide inovasi section and show detail
         document.getElementById('inovasi').classList.remove('active');
         document.getElementById('detail-berita').classList.add('active');
         
-        // Scroll ke atas
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }
 
-    // Fungsi untuk menyembunyikan detail berita
     function hideDetail() {
-      // Kembali ke section inovasi
       document.getElementById('detail-berita').classList.remove('active');
       document.getElementById('inovasi').classList.add('active');
       
-      // Scroll ke atas
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>

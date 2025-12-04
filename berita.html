@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="/style_berita.css">
 </head>
 <body>
-  <!-- Navigation -->
   <header>
     <div class="logo">
       <img src="/Logotefa.png" alt="Logo TEFA">
@@ -45,14 +44,11 @@
     </nav>
   </header>
 
-  <!-- Main Content -->
   <main class="py-5">
     <div class="container">
       
-      <!-- Page Title -->
       <h1 class="page-title">Berita Kegiatan</h1>
       
-      <!-- News Navigation -->
       <div class="news-nav">
         <a href="/kegiatan.html">
           <button class="news-nav-item active">
@@ -71,10 +67,8 @@
         </a>
       </div>
 
-      <!-- Section: Kegiatan -->
       <section id="kegiatan" class="news-section active">
         <div class="news-grid">
-          <!-- News Item 1 -->
           <div class="news-item" onclick="showDetail('kegiatan1')">
             <div class="news-image">
               <img src="/audit SNI.jpg" alt="Audit SN TEFA Canning">
@@ -89,7 +83,6 @@
             </div>
           </div>
 
-          <!-- News Item 2 -->
           <div class="news-item" onclick="showDetail('kegiatan2')">
             <div class="news-image">
               <img src="/produkmahasiswa.jpg" alt="Produk Pangan Kaleng Mahasiswa">
@@ -104,7 +97,6 @@
             </div>
           </div>
 
-          <!-- News Item 3 -->
           <div class="news-item" onclick="showDetail('kegiatan3')">
             <div class="news-image">
               <img src="/proseskrusial.jpg" alt="Proses Krusial Pengalengan">
@@ -119,7 +111,6 @@
             </div>
           </div>
 
-          <!-- News Item 4 -->
           <div class="news-item" onclick="showDetail('kegiatan4')">
             <div class="news-image">
               <img src="/Praktik Pengalengan.jpg" alt="Praktik Pengalengan Ikan">
@@ -136,7 +127,6 @@
         </div>
       </section>
 
-      <!-- Section: Detail Berita -->
       <section id="detail-berita" class="news-section">
         <div class="berita-detail">
           <h2 id="detail-title" class="page-title">Judul Berita</h2>
@@ -153,7 +143,6 @@
     </div>
   </main>
 
-  <!-- Footer -->
   <footer>
   <div class="footer-container">
     <div class="footer-brand">
@@ -166,39 +155,32 @@
     </div>
 
     <div class="footer-menu">
-      <!-- Kolom 1: Alamat -->
       <div class="footer-menu-column">
         <h4>Alamat</h4>
         <p>Alamat RPVG+PQJ, Jl. Tawang Mangu,<br>Lingkungan Panji, Tegalgede,<br>Kec. Sumbersari, Kabupaten Jember, Jawa Timur 68124<br>Politeknik Negeri Jember</p>
       </div>
 
-      <!-- Kolom 2: Tentang Kami + KONTAK -->
       <div class="footer-menu-column">
         <h4>Tentang kami</h4>
         <a href="/tentang.html">Sejarah</a>
         <a href="/tentang.html">Visi misi</a>
         <a href="/tentang.html">Tentang Sarden</a>
-
-        <!-- Tambahkan "Kontak" di sini (bukan sebagai kolom terpisah) -->
         <h4 style="margin-top: 15px;">Kontak</h4>
         <a href="/kontak.html">Hubungi Kami</a>
       </div>
 
-      <!-- Kolom 3: Produk Kami -->
       <div class="footer-menu-column">
         <h4>Produk Kami</h4>
         <a href="/produk.html">Detail produk</a>
         <a href="/informasi.html">Informasi keamanan produk</a>
       </div>
 
-      <!-- Kolom 4: Proses pembuatan -->
       <div class="footer-menu-column">
         <h4>Proses pembuatan</h4>
         <a href="/tahapan.html">Tahapan</a>
         <a href="/alat.html">Alat alat</a>
       </div>
 
-      <!-- Kolom 5: Berita -->
       <div class="footer-menu-column">
         <h4>Berita</h4>
         <a href="/kegiatan.html">Kegiatan</a>
@@ -214,7 +196,6 @@
 </footer>
   
   <script>
-    // Data berita kegiatan
     const beritaData = {
       'kegiatan1': {
         title: 'Politeknik Negeri Jember laksanakan audit SNI untuk produk sarden kaleng di TEFA Canning',
@@ -259,7 +240,6 @@
       }
     };
 
-    // Fungsi untuk menampilkan detail berita
     function showDetail(beritaId) {
       const berita = beritaData[beritaId];
       
@@ -269,23 +249,16 @@
         document.getElementById('detail-image').src = berita.image;
         document.getElementById('detail-image').alt = berita.title;
         document.getElementById('detail-content').innerHTML = berita.content;
-        
-        // Hide kegiatan section and show detail
         document.getElementById('kegiatan').classList.remove('active');
         document.getElementById('detail-berita').classList.add('active');
         
-        // Scroll ke atas
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }
 
-    // Fungsi untuk menyembunyikan detail berita
     function hideDetail() {
-      // Kembali ke section kegiatan
       document.getElementById('detail-berita').classList.remove('active');
       document.getElementById('kegiatan').classList.add('active');
-      
-      // Scroll ke atas
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>

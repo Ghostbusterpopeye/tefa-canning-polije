@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="/style_berita.css">
 </head>
 <body>
-  <!-- Navigation -->
   <header>
     <div class="logo">
       <img src="/Logotefa.png" alt="Logo TEFA">
@@ -45,14 +44,11 @@
     </nav>
   </header>
 
-  <!-- Main Content -->
   <main class="py-5">
     <div class="container">
       
-      <!-- Page Title -->
       <h1 class="page-title">Berita Pencapaian</h1>
       
-      <!-- News Navigation -->
       <div class="news-nav">
         <a href="/kegiatan.html">
           <button class="news-nav-item">
@@ -71,10 +67,8 @@
         </a>
       </div>
 
-      <!-- Section: Pencapaian -->
       <section id="pencapaian" class="news-section active">
         <div class="news-grid">
-          <!-- News Item 1 -->
           <div class="news-item" onclick="showDetail('pencapaian1')">
             <div class="news-image">
               <img src="/pencapian1.png" alt="Sertifikasi SNI">
@@ -89,7 +83,6 @@
             </div>
           </div>
 
-          <!-- News Item 2 -->
           <div class="news-item" onclick="showDetail('pencapaian2')">
             <div class="news-image">
               <img src="/pencapaian2.jpg" alt="Penghargaan Inovasi">
@@ -105,7 +98,6 @@
           </div>
       </section>
 
-      <!-- Section: Detail Berita -->
       <section id="detail-berita" class="news-section">
         <div class="berita-detail">
           <h2 id="detail-title" class="page-title">Judul Berita</h2>
@@ -122,7 +114,6 @@
     </div>
   </main>
 
-  <!-- Footer -->
 <footer>
   <div class="footer-container">
     <div class="footer-brand">
@@ -135,39 +126,33 @@
     </div>
 
     <div class="footer-menu">
-      <!-- Kolom 1: Alamat -->
       <div class="footer-menu-column">
         <h4>Alamat</h4>
         <p>Alamat RPVG+PQJ, Jl. Tawang Mangu,<br>Lingkungan Panji, Tegalgede,<br>Kec. Sumbersari, Kabupaten Jember, Jawa Timur 68124<br>Politeknik Negeri Jember</p>
       </div>
 
-      <!-- Kolom 2: Tentang Kami + KONTAK -->
       <div class="footer-menu-column">
         <h4>Tentang kami</h4>
         <a href="/tentang.html">Sejarah</a>
         <a href="/tentang.html">Visi misi</a>
         <a href="/tentang.html">Tentang Sarden</a>
 
-        <!-- Tambahkan "Kontak" di sini (bukan sebagai kolom terpisah) -->
         <h4 style="margin-top: 15px;">Kontak</h4>
         <a href="/kontak.html">Hubungi Kami</a>
       </div>
 
-      <!-- Kolom 3: Produk Kami -->
       <div class="footer-menu-column">
         <h4>Produk Kami</h4>
         <a href="/produk.html">Detail produk</a>
         <a href="/informasi.html">Informasi keamanan produk</a>
       </div>
 
-      <!-- Kolom 4: Proses pembuatan -->
       <div class="footer-menu-column">
         <h4>Proses pembuatan</h4>
         <a href="/tahapan.html">Tahapan</a>
         <a href="/alat.html">Alat alat</a>
       </div>
 
-      <!-- Kolom 5: Berita -->
       <div class="footer-menu-column">
         <h4>Berita</h4>
         <a href="/kegiatan.html">Kegiatan</a>
@@ -183,7 +168,6 @@
 </footer>
   
   <script>
-    // Data berita pencapaian
     const beritaData = {
       'pencapaian1': {
         title: 'Cetar! Dosen Polije Kembangkan Produk Surimi',
@@ -210,7 +194,6 @@
       },
     };
 
-    // Fungsi untuk menampilkan detail berita
     function showDetail(beritaId) {
       const berita = beritaData[beritaId];
       
@@ -226,7 +209,6 @@
       }
     }
 
-    // Fungsi untuk menyembunyikan detail berita
     function hideDetail() {
       document.getElementById('detail-berita').classList.remove('active');
       document.getElementById('pencapaian').classList.add('active');
